@@ -1,0 +1,154 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MyViewport",
+        "layout": "fit"
+    },
+    "designerId": "9266317b-339c-4b82-813f-a45803ef23ed",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "title": "My Smart App"
+            },
+            "designerId": "d6279aaa-4da1-4503-ba3f-9257ed314910",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "store": "userStore",
+                        "title": "User Data"
+                    },
+                    "designerId": "bc3d6d69-4b07-4a4c-8f7a-f801b29a1ead",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "userid",
+                                "flex": 1,
+                                "text": "User ID"
+                            },
+                            "designerId": "381508a0-8e1c-4933-a0f3-4ec8990c3bb7"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "firstname",
+                                "flex": 1,
+                                "text": "First Name"
+                            },
+                            "designerId": "e4b4ed3d-0f3f-4581-b818-25329f58b98b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "lastname",
+                                "flex": 1,
+                                "text": "Last Name"
+                            },
+                            "designerId": "693bfa39-e33f-4ac4-b82a-790365e65647"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "phone",
+                                "flex": 1,
+                                "text": "Phone"
+                            },
+                            "designerId": "7c4aa858-a371-4d31-8b8f-d01cd199b227"
+                        },
+                        {
+                            "type": "Ext.grid.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "39e82178-0419-482a-98a4-8eb31736d11a"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGridpanelBoxReady",
+                                "implHandler": [
+                                    "testExampleService.getUsersFromDB(\r",
+                                    "    function(res){\r",
+                                    "        var userStore = Ext.StoreMgr.lookup('userStore');\r",
+                                    "        \r",
+                                    "        userStore.removeAll();\r",
+                                    "        \r",
+                                    "        var userList = res;\r",
+                                    "        \r",
+                                    "        var arr = [];\r",
+                                    "        for(var i = 0; i < userList.length; i++){\r",
+                                    "            \r",
+                                    "            \r",
+                                    "            var user = userList[i];\r",
+                                    "            var newRecord = Ext.create('SmartApp.model.User',{\r",
+                                    "                firstname: user.firstName,\r",
+                                    "                lastname: user.lastName,\r",
+                                    "                phone: user.phone,\r",
+                                    "                userid: user.userId\r",
+                                    "            });\r",
+                                    "            \r",
+                                    "            arr.push(newRecord);\r",
+                                    "            \r",
+                                    "        }\r",
+                                    "        \r",
+                                    "        userStore.loadData(arr);\r",
+                                    "    }\r",
+                                    ");"
+                                ],
+                                "name": "boxready",
+                                "scope": "me"
+                            },
+                            "designerId": "72eafc1d-f5fe-45f1-8444-8c6943336ff4"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

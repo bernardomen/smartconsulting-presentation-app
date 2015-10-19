@@ -1,0 +1,50 @@
+{
+    "name": "SmartAppExample",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": "../../webapp/SmartAppExample",
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "displayfield-ExtBox1-1886-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1936-inputEl": "Not Installed"
+    },
+    "xdsVersion": "3.0.4",
+    "xdsBuild": 1386,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "9266317b-339c-4b82-813f-a45803ef23ed"
+        ],
+        "store": [
+            "1740bc6c-3785-4664-960c-e3d44c934d52"
+        ],
+        "controller": [],
+        "model": [
+            "0970c5be-cb53-46ed-8ff4-5a32ae1bb3a0"
+        ],
+        "resource": [
+            "33c42659-008e-435f-ab43-12e00f0d85db",
+            "04bcb8c7-90ed-4d21-ab3a-511c355c1034"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,1 @@
+# smartconsulting-presentation-app
